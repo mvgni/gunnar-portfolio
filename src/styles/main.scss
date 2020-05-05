@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$text-color: #444;
+$font: Montserrat, sans-serif;
+$margin: 175px;
+$margin-total: $margin + $margin;
+$tablet_margin: 80px;
+$tablet_margin-total: $tablet_margin + $tablet_margin;
+$mobile_margin: 45px;
+$mobile_margin-total: $mobile_margin + $mobile_margin;
+$link: #264f36;
+$link-hover: #418a5d;
+
+body {
+    color: $text-color;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: $font;
+}
+
+main {
+    margin-left: $margin;
+    margin-right: $margin;
+    max-width: 1500px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 35px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    width: calc(100% - #{$margin-total});
+    margin-left: $margin;
+    margin-right: $margin;
+    max-width: 1500px;
+}
+
+.main-nav_alt {
+    color: $text-color;
+}
+
+.nav-title {
+    z-index: 2;
+}
+
+#header-container {
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    margin-left: -$margin;
+    overflow:hidden;
+    display: flex;
+    place-items: center;
+
+}
+
+#header-container_text {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    font-size: 75px;
+    margin-top: 120px; //offset for nav bar
+}
+
+#header-container:after {
+    background-color: black;
+    opacity: 0.2;
+    content: "";
+    width: 100%;
+    height: 50vh;
+    display: block;
+    position: absolute;
+}
+
+.header-container_content img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#text-section {
+    height: 100vh;
+    margin-top: 10%;
+}
+
+#text-section_alt {
+    height: 100vh;
+    margin: 0;
+}
+
+.text-container, .text-container_alt {
+    width: 75%;
+}
+
+.text-container p {
+    font-size: 45px;
+    margin-bottom: 15%;
+    line-height: 1.5em;
+}
+
+.text-container_alt p {
+    font-size: 34px;
+    margin-bottom: 15%;
+    line-height: 1.7em;
+}
+
+.text-container a {
+    font-size: 60px;
+    color: $link;
+    transition: .5s ease;
+}
+
+.text-container a:hover {
+    color: $link-hover;
+}
+
+.hamburger {
+    cursor: pointer;
+    z-index: 9;
+}
+
+.line {
+    width: 2.5rem;
+    height: 2px;
+    background: white;
+    margin-bottom: 13px;
+    margin-top: 13px;
+}
+
+.line_alt {
+    width: 2.5rem;
+    height: 2px;
+    margin-bottom: 13px;
+    margin-top: 13px;
+    background: $text-color;
+}
+
+/* .menu {
+    width: 100vw;
+    height: 100vh;
+    background: $link;
+    color: white;
+    position: fixed;
+    top: 0;
+    transition: ease .2s;
+    z-index: 10;
+} */
+
+.menu {
+    z-index: 3;
+    position: fixed;
+    background: #222;
+    height: 100vh;
+    width: 100%;
+    top: -2000px;
+    margin: 0;
+    padding: 0;
+}
+
+.data {
+    margin: 0 0 0 $margin;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul {
+    list-style: none;
+}
+
+.menu a {
+    font-size: 50px;
+    margin-bottom: 4%;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.menu a:hover {
+    color: #bbb;
+}
+
+.active {
+    position: fixed;
+    right: $margin;
+}
+
+.bottom {
+    font-size: 12px;
+    margin-bottom: 5%;
+}
+
+.bottom a {
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.competency-text {
+    color: #378ec1;
+    font-weight: bold;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .text-container {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        margin-left: $tablet_margin;
+        margin-right: $tablet_margin;
+    }
+
+    .data {
+        margin: 0 0 0 $tablet_margin;
+    }
+
+    .main-nav {
+        width: calc(100% - #{$tablet_margin-total});
+        margin-left: $tablet_margin;
+        margin-right: $tablet_margin;
+    }
+
+    .active {
+        right: $tablet_margin;
+    }
+
+    #header-container {
+        margin-left: -$tablet_margin;
+    }
+
+    .menu a {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    main {
+        margin-left: $mobile_margin;
+        margin-right: $mobile_margin;
+    }
+
+    .data {
+        margin: 0 0 0 $mobile_margin;
+    }
+
+    .main-nav {
+        width: calc(100% - #{$mobile_margin-total});
+        margin-left: $mobile_margin;
+        margin-right: $mobile_margin;
+        font-size: 25px;
+    }
+
+    .active {
+        right: $mobile_margin;
+    }
+
+    #header-container {
+        margin-left: -$mobile_margin;
+    }
+
+    .menu a {
+        font-size: 35px;
+        margin-bottom: 8%;
+    }
+
+    .text-container p {
+        font-size: 35px;
+    }
+}
