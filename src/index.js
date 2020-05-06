@@ -9,6 +9,8 @@ import { CSSPlugin } from 'gsap/CSSPlugin'
 import {TimelineMax, Expo} from 'gsap/all'
 import $ from 'jquery'
 
+import './styles/main.scss'
+
 gsap.registerPlugin(CSSPlugin)
 
 var Rellax = require('rellax')
