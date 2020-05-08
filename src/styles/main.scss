@@ -359,6 +359,45 @@ ul {
     transform-origin: 100% 50%;
   }
 
+  .top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3em 3em 0;
+    border-radius: 50%;
+    padding: .25em;
+    width: 40px;
+    height: 40px;
+    background-color: #F8F8F8;
+    color: $text-color;
+    
+    &.show {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    &.hide {
+      visibility: hidden;
+      opacity: 0;
+    }
+  
+      i {
+          width: 24px;
+          height: 12px;
+      }
+  
+      &:hover {
+          background-color: #E8E8E8;
+  
+          
+      }
+  }
+
 
 
 
@@ -450,6 +489,6 @@ ul {
     }
 
     #cd-vertical-nav {
-        top: 90%;
+        display: none;
     }
 }

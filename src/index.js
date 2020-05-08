@@ -90,3 +90,31 @@ function smoothScroll(target) {
     );
 }
 
+const scrollToTopButton = $('#js-top');
+
+const scrollFunc = () => {
+  let y = window.scrollY;
+  
+  if (y > 0) {
+    scrollToTopButton.addClass('show').removeClass('hide')
+  } else {
+    scrollToTopButton.addClass('hide').removeClass('show')
+  }
+};
+
+window.addEventListener("scroll", scrollFunc);
+
+const scrollToTop = () => {
+  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  
+  if (c > 20) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, c - c / 10);
+  }
+};
+
+scrollToTopButton.click(() => {
+  e.preventDefault();
+  scrollToTop();
+})
+
