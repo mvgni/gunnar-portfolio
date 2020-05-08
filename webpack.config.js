@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 var webpack = require('webpack')
 
 module.exports = {
@@ -27,9 +28,9 @@ module.exports = {
                 use: [
                     {
                         loader: "file-loader",
-                        options: {
+                        /* options: {
                             name: '[name].[ext]'
-                        }  
+                        }   */
                     }
                     
                 ]
@@ -74,6 +75,9 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css"
         }),
+        new CopyWebpackPlugin ([{
+            from: 'src/static', to: 'static'
+        }]),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: 'jquery'
