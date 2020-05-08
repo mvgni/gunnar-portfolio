@@ -2,8 +2,8 @@
 
 //colors
 $text-color: #444;
-$link: #264f36;
-$link-hover: #418a5d;
+$link: #d17436;
+$link-hover: #e6a87f;
 
 
 //margins
@@ -124,6 +124,16 @@ footer {
 
 .text-container, .text-container_alt {
     width: 75%;
+}
+
+.text-container_alt img {
+    max-width: 100%;
+    margin-bottom: 10%;
+}
+
+.text-container_alt a {
+    color: #d17436;
+    font-weight: bold;
 }
 
 #references p {
