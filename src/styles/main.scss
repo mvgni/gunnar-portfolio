@@ -50,6 +50,12 @@ main, footer {
     max-width: 1500px;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+}
+
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -118,6 +124,11 @@ main, footer {
 
 .text-container, .text-container_alt {
     width: 75%;
+}
+
+#references p {
+    margin-bottom: 5%;
+    font-size: 20px;
 }
 
 .text-container p {

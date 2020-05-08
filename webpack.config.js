@@ -37,7 +37,9 @@ module.exports = {
                     // fallback to style-loader in development
                     /* process.env.NODE_ENV !== 'production'
                     ? 'style-loader'
-                    :  */MiniCssExtractPlugin.loader,
+                    :  */
+                    MiniCssExtractPlugin.loader,
+                    //"style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
@@ -56,6 +58,14 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/sccs-exp.html",
             filename: "./sccs-exp.html"
+        }),
+        new HtmlWebPackPlugin({
+            template: "./src/mentoring-advising.html",
+            filename: "./mentoring-advising.html"
+        }),
+        new HtmlWebPackPlugin({
+            template: "./src/area-of-specialization.html",
+            filename: "./area-of-specialization.html"
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
