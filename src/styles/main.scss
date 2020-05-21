@@ -79,7 +79,7 @@ footer {
     z-index: 2;
 }
 
-#header-container {
+#header-container, #parallax-container {
     width: 100vw;
     height: 70vh;
     background-size: cover;
@@ -87,18 +87,21 @@ footer {
     overflow:hidden;
     display: flex;
     place-items: center;
+}
 
+#parallax-container {
+    place-items: end;
 }
 
 #header-container_text {
-    height: 50vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     font-size: $font-size-header;
     margin-top: 120px; //offset for nav bar
 }
 
-#header-container:after {
+#header-container:after, #parallax-container:after {
     background-color: black;
     opacity: 0.2;
     content: "";
@@ -108,7 +111,7 @@ footer {
     position: absolute;
 }
 
-.header-container_content img {
+.header-container_content img, .parallax-container_content img {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -119,6 +122,10 @@ footer {
 }
 
 #text-section_alt {
+    margin: 15% 0 0 0;
+}
+
+#text-section_no-parallax {
     margin: 0;
 }
 
@@ -440,7 +447,7 @@ ul {
         right: $tablet_margin;
     }
 
-    #header-container {
+    #header-container, #parallax-container {
         margin-left: -$tablet_margin;
     }
 
@@ -474,7 +481,7 @@ ul {
         right: $mobile_margin;
     }
 
-    #header-container {
+    #header-container, #parallax-container {
         margin-left: -$mobile_margin;
     }
 
