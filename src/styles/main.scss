@@ -34,7 +34,9 @@ $font-size-menu_phone: 35px;
 $font-size-footer: 12px;
 
 
-
+html {
+    overflow-x: hidden;
+}
 
 body {
     color: $text-color;
@@ -101,7 +103,7 @@ footer {
     margin-top: 120px; //offset for nav bar
 }
 
-#header-container:after, #parallax-container:after {
+/* #header-container:after, #parallax-container:after {
     background-color: black;
     opacity: 0.2;
     content: "";
@@ -109,7 +111,7 @@ footer {
     height: 70vh;
     display: block;
     position: absolute;
-}
+} */
 
 .header-container_content img, .parallax-container_content img {
     width: 100vw;
