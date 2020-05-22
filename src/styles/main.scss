@@ -141,7 +141,7 @@ footer {
 }
 
 .text-container_alt a {
-    color: #d17436;
+    color: $link;
     font-weight: bold;
 }
 
@@ -168,11 +168,11 @@ footer {
 
 .text-container_alt {
     ul {
-        list-style: disc;
+        //list-style: disc;
         
         li {
             margin-bottom: 20px;
-            font-size: 20px;
+            font-size: 25px;
         }
     }
 }
@@ -182,13 +182,13 @@ footer {
     font-size: $font-size-subhead;
 }
 
-.text-container a {
+.link-large {
     font-size: 60px;
     color: $link;
     transition: .5s ease;
 }
 
-.text-container a:hover {
+.link-large:hover {
     color: $link-hover;
 }
 
@@ -297,6 +297,23 @@ ul {
 .anchors a:hover {
     color: $link-hover;
 }
+
+table {
+    width: 100%;
+    margin-top: 3%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 20px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th:first-child, td:first-child {
+    padding-left: 0;
+}
+
 
 
 
@@ -508,7 +525,7 @@ ul {
         font-size: $font-size-subhead_phone;
     }
 
-    .text-container a {
+    .link-large {
         font-size: 35px;
     }
 

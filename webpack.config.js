@@ -60,6 +60,10 @@ module.exports = {
             filename: "./about.html"
         }),
         new HtmlWebPackPlugin({
+            template: "./src/program-of-study.html",
+            filename: "./program-of-study.html"
+        }),
+        new HtmlWebPackPlugin({
             template: "./src/sccs-exp.html",
             filename: "./sccs-exp.html"
         }),
