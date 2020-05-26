@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@200;300&display=swap');
 
 //colors
 $text-color: #444;
@@ -16,8 +18,7 @@ $mobile_margin-total: $mobile_margin + $mobile_margin;
 
 
 //fonts
-$font: Montserrat, sans-serif;
-
+$font: Muli, sans-serif;
 $font-size-mainnav: 35px;
 $font-size-mainnav_phone: 25px;
 $font-size-home: 45px;
